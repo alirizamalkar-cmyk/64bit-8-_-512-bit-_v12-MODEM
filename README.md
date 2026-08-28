@@ -11,17 +11,7 @@
 Çift yönlü olacak şekilde 
 veriyi alıp işler modem arayüzüne ve modem arayüzünden  alıp işleyip göderir
 
-eng
 
-IP v12 512-bit Modem
-
-512-bit Parallel Processor Architecture
-
-This is an advanced hardware and software architecture that aims to create a 512-bit data bus (or parallel processing cluster) by combining parallel cards with 8-bit, 16-bit, 32-bit, 64-bit, and 128-bit processing capabilities, using cards with the same or different bit values. The goal is to then integrate this system with a modem interface and a media player. You can optimize the desired structure (distributor card, processor parallel cards, combiner card, modem interface, and media player) as follows: 🛠️ System Architecture and Hardware: The data buses must be designed with great precision to ensure the cards work synchronously.
-
-It will be bidirectional,
-
-receiving and processing data to the modem interface and receiving and processing data from the modem interface before sending it back.
 
 Dağıtıcı Kart (Master/Scheduler)1Gelen veriyi (Ağ veya Medya) 512-bit bölerek paralel karta dağıtır.
 
@@ -33,4 +23,27 @@ mode ,roter ,acsess,  4g 5g ve 6 g özelligi
 
 Modem ara yüz olarak
 main:app", host="127.0.0.1", port=8000, 
+http://127.0.0.1:8000
+
+eng
+
+512-bit Parallel Processing Architecture
+
+It is an advanced hardware and software architecture that aims to create a 512-bit data bus (or parallel processing cluster) by combining cards with 8-bit, 16-bit, 32-bit, 64-bit, and 128-bit processing capabilities, and combining cards with the same or different bit values ​​to form parallel cards. The goal is to then integrate this system with a modem interface and a media player.  We can configure your desired structure (distributor card, processor parallel cards, combiner card, modem interface, and media player) as follows: 🛠️ System Architecture and Hardware The data paths must be designed with great precision to ensure the cards work synchronously.
+
+It will be bidirectional:
+
+It receives and processes data to the modem interface and receives and processes data from the modem interface and sends it back.
+
+Distributor Card (Master/Scheduler): 1. Distributes the incoming data (Network or Media) by dividing it into 512-bit segments and sending it to the parallel card.
+
+Processing Cards (Parallel Nodes): Processes the data synchronously (in parallel) on the parallel cards. It produces a total of 512-bit of power.
+
+Combiner Card (Collector/Gateway): Combines the bits coming from the parallel card and transmits the results as a single 512-bit data block to the modem interface. 🌐
+
+Mode, router, access, 4G, 5G, and 6G features
+
+Modem interface  as
+main:app", host="127.0.0.1", port=8000,
+
 http://127.0.0.1:8000
